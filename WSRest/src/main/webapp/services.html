@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WS Client</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
+          crossorigin="anonymous">
+    <link href="http://getbootstrap.com/examples/sticky-footer-navbar/sticky-footer-navbar.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"
+            integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ=="
+            crossorigin="anonymous"></script>
+    <script src="js/common.js"></script>
+    <script src="js/services.js"></script>
+</head>
+<body>
+    <div class="container">
+        <ul class="list-inline nav nav-pills">
+            <li class=""><a id="listOfServicesLink" href="#" data-toggle="tab" data-target="#listOfServices"><span class="glyphicon glyphicon-th-list"></span> List of Services</a></li>
+            <li class=""><a id="currentServiceLink" href="#" data-toggle="tab" data-target="#currentService"><span class="glyphicon glyphicon-play-circle"></span> Current service</a></li>
+            <li class=""><a id="resultsLink" href="#" data-toggle="tab" data-target="#results"><span class="glyphicon glyphicon-file"></span> Results</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane collapse" id="listOfServices"></div>
+            <div class="tab-pane collapse" id="currentService"></div>
+            <div class="tab-pane collapse" id="results"></div>
+        </div><!-- tab content -->
+    </div>
+</body>
+</html>

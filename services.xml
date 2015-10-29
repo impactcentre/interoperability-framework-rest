@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services>
+        <service id="1">
+                <title>Exif tool</title>
+                <url>http://impact.dlsi.ua.es/impact-exiftoolwithtoolwrapperdemo873-service/Exiftoolwithtoolwrapperdemo873.wsdl</url>
+                <description>ExifTool is a platform-independent Perl library plus a command-line application for reading, writing and editing meta information in a wide variety of files.</description>
+        </service>
+</services>

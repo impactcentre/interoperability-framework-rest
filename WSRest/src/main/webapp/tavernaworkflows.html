@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WS Client</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
+          crossorigin="anonymous">
+    <link href="http://getbootstrap.com/examples/sticky-footer-navbar/sticky-footer-navbar.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"
+            integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ=="
+            crossorigin="anonymous"></script>
+    <script src="js/common.js"></script>
+    <script src="js/tavernaworkflows.js"></script>
+</head>
+<body>
+        <!--span class="btn btn-default btn-file">
+            Browse <input type="file" id="uploadWorkflowInputFile">
+        </span-->
+        <div class="container">
+            <ul class="list-inline nav nav-pills">
+                <li class=""><a id="workflowUploaderLink" href="#" data-toggle="tab" data-target="#workflowUploader"><span class="glyphicon glyphicon-th-list"></span> Workflow Uploader</a></li>
+                <li class=""><a id="currentWorkflowLink" href="#" data-toggle="tab" data-target="#currentWorkflow"><span class="glyphicon glyphicon-play-circle"></span> Current workflow</a></li>
+                <li class=""><a id="resultsLink" href="#" data-toggle="tab" data-target="#results"><span class="glyphicon glyphicon-file"></span> Results</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane collapse" id="workflowUploader">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <form id="uploadWorkflowForm" action="" method="POST" enctype="multipart/form-data">
+                                <legend>Upload workflow</legend>
+                                <input type="file" id="uploadWorkflowForm-file" name="workflowFile" style="visibility:hidden;"/><br/>
+                                <input type="hidden" id="filename" name="filename" placeholder=" Select a workflow file "/>
+                                <a class="btn btn-default btn-file" id="selectFile" onclick="$('#uploadWorkflowForm-file').click();">Select a taverna workflow file</a>
+
+                                <button type="submit" id="upload-button" class="btn btn-default btn-file">Upload</button>
+                            </form>
+                            <div id="uploadLoading" style="display:none"></div>
+                        </div>
+
+                        <div class="col-lg-2 col-sm-3 col-xs-6">
+                            <h2><em>or</em></h2>
+                        </div>
+                        <div class="col-xs-4">
+                            <form id="myExperimentForm" action="" method="POST" enctype="">
+                                <legend>MyExperiment</legend>
+                                <div class="form-group">
+                                    <label for="myExperimentUser">User</label>
+                                    <input type="text" id="myExperimentUser" name="myExperimentUser" class="form-control" placeholder=" User "/>
+                                    <label for="myExperimentPassword">Password</label>
+                                    <input type="password" id="myExperimentPassword" name="myExperimentPassword" class="form-control" placeholder=" Password "/>
+                                </div>
+                                <button type="submit" id="login-button" class="btn btn-default btn-file">Login</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="tab-pane collapse" id="currentWorkflow">
+                    <div class="row">
+                        <div class="col-xs" id="workflowPreview"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs" id="currentWorkflowForm"></div>
+                    </div>
+                </div>
+                <div class="tab-pane collapse" id="results"></div>
+            </div><!-- tab content -->
+        </div>
+</body>
+</html>

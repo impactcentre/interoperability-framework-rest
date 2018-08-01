@@ -79,7 +79,10 @@ function getServiceForm(serviceId, operationId ) {
             else
                 html += '>';
             $.each(input.posibleValues, function (i, element) {
-                html += '<option value="' + element + '" >' + element + '</option>';
+            	if(input.defaultValue == element)
+            		html += '<option value="' + element + '" selected>' + element + '</option>';
+            	else
+            		html += '<option value="' + element + '" >' + element + '</option>';
             });
             html += '</select>';
         }
